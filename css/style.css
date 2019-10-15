@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+@font-face{
+    font-family: Lato-bold;
+    src: url('../font/Lato-Bold.ttf')
+}
+@font-face{
+    font-family: Eurofurenceregular;
+    src: url('../font/euro_35/eurof35.ttf')
+}
+@font-face{
+    font-family: Lato-regular;
+    src: url('../font/Lato-Regular.ttf')
+}
+html{
+    font-family: Lato-regular;
+    letter-spacing: 0.48px;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 0.5fr 0.3fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-areas:" nav nav nav nav nav "
+                        "navimg navimg navimg navimg navimg "
+                        ". p img1 img2 ."
+                        ". p img3 img3 ."
+                        ". icons icons icons ." ;
+}
+
+.nav{
+    color: lightyellow;
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    background-color:black ;
+}
+.main-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    margin-left: 50px;
+}
+
+.nav ul{
+    display: flex;
+    margin: 0;
+    font-family: Lato-bold;
+    
+}
+.nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 132px;
+    width: 8rem;
+    list-style-type: none;;
+}
+.nav-img{
+    width: 100%;
+    grid-area: navimg;
+    background-color: grey;
+}
+.paragraph{
+    grid-area: p;
+    padding: 20px;
+    color: #606060;
+    line-height: 20px;
+}
+.paragraph h2{
+    line-height: 30px;
+}
+.div-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    /* margin: 10px; */
+}
+.img1{
+    grid-area: img1;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.img2{
+    grid-area: img2;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.img3{
+    grid-area: img3;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: icons;
+    
+}
+.icon-share{
+    font-family: Lato-bold;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    background-color: #e5e5e5;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.facebook-logo:hover{
+    background-color:rgb(59, 89, 152);
+    cursor: pointer;
+}
+.tweeter-logo:hover{
+    background-color:rgb(8, 160, 233);
+    cursor: pointer;
+}
+
+.be-logo:hover{
+    background-color:rgb(59, 152, 79);
+    cursor: pointer;
+}
+.ball-logo:hover{
+    background-color:rgb(221, 114, 132);
+    cursor: pointer;
+}
+@media (max-width:1050px){
+   
+    .container{
+        grid-template-columns: 0.3fr  1fr 0.5fr 0.3fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  ;
+         grid-template-areas:" nav nav nav nav "
+                        "navimg navimg navimg navimg "
+                        ". p p . "
+                        ".  img1 img2 ."
+                        ".  img3 img2 ."
+                        ".  icons icons ." ;
+
+    }
+    .div-img{
+        
+        width: 100%;
+        height: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+        
+    }
+    .img1{
+      
+        width:100%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .img2{
+        
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .img3{
+       
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .img-content{
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        padding-top: 10px;
+       
+    }
+}
+@media (max-width:650px){
+    .container{
+        grid-template-columns:  1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+         grid-template-areas:" nav  "
+                        "navimg "
+                        " p  "
+                        " img1 "
+                        " img2 "
+                        "img3"
+                        " icons " ;
+
+
+    }
+    .paragraph{
+        width: 100%;
+    }
+    .nav{
+        display: none
+    }
+}
